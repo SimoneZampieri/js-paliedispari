@@ -1,19 +1,21 @@
 // chiedere all'utente di inserire una parola
 
-const parola = prompt('Inserisci parola')
+let parola = prompt('Inserisci parola')
 
 //Creare una funzione per capire se la parola è palindroma
 
-function palindroma (parola){
-    let palindroma = parola.split(' ')
-    palindroma = parola.reverse()
-    palindroma = parola.join()
+while(!parola){
+    parola = prompt('Inserisci parola')
+}
 
-    if(parola === palindroma){
-        console.log('la parola è palindroma')
-    } else{
-        console.log('non è palindroma')
-    }
+const risultato = Palindroma(parola);
 
-    return(palindroma)
+console.log(risultato);
+
+function Palindroma(word) {
+    const reverseWord = word.split().reverse().join('');
+     if(word === reverseWord){
+        console.log('La parola è palindroma')
+     } else ('La parola non è palindroma')
+    
 }
